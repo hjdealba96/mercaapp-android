@@ -97,7 +97,7 @@ the most recent data.
 
 - Filters are not available and the sorting criteria of the products is the same as the received from the API.
 
-## IMPORTANT ⚠️
+## TROUBLESHOOTING ⚠️
 
 If you are experiencing having troubles when trying to see Previews of composables, upgrade Android Studio to the most recent version. The AS version used for building this project was **2021.1.1 Path 3** with Gradle Plugin **7.1.3** and Gradle Version **7.2**.
 
