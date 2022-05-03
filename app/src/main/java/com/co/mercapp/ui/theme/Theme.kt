@@ -13,18 +13,9 @@ private val DarkColorPalette = darkColors(
 )
 
 private val LightColorPalette = lightColors(
-    primary = DodieYellow,
-    primaryVariant = Dandelion,
-    secondary = Blueberry
-
-    /* Other default colors to override
-    background = Color.White,
-    surface = Color.White,
-    onPrimary = Color.White,
-    onSecondary = Color.Black,
-    onBackground = Color.Black,
-    onSurface = Color.Black,
-    */
+    primary = CornflowerBlue,
+    primaryVariant = CornflowerBlue,
+    secondary = ToryBlue
 )
 
 @Composable

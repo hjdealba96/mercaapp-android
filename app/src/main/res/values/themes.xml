@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <style name="Theme.MercaApp" parent="android:Theme.Material.Light.NoActionBar">
-        <item name="android:statusBarColor">@color/dandelion</item>
+        <item name="android:statusBarColor">@color/blueberry</item>
+        <item name="android:windowLayoutInDisplayCutoutMode">default</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
     </style>
 
     <style name="Theme.MercaApp.SplashScreen" parent="Theme.SplashScreen">
-        <item name="windowSplashScreenBackground">@color/dodie_yellow</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="windowSplashScreenBackground">@color/blueberry</item>
+        <item name="windowSplashScreenAnimatedIcon">@mipmap/ic_launcher</item>
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
         <item name="postSplashScreenTheme">@style/Theme.MercaApp</item>
     </style>
 

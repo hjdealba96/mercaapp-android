@@ -12,9 +12,9 @@ android {
     defaultConfig {
         applicationId "com.co.mercapp"
         minSdk 28
-        targetSdk 31
+        targetSdk 32
         versionCode 1
-        versionName "1.0"
+        versionName "1.0.1"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
@@ -40,6 +40,7 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+
     buildFeatures {
         compose true
     }
@@ -48,6 +49,11 @@ android {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
+    testOptions {
+        unitTests {
+            includeAndroidResources = true
+        }
+    }
     packagingOptions {
         resources {
             excludes += '/META-INF/{AL2.0,LGPL2.1}'
@@ -55,10 +61,18 @@ android {
     }
 }
 
+kotlin.sourceSets.all {
+    languageSettings.optIn("kotlin.RequiresOptIn")
+}
+
 dependencies {
+
+    def retrofit = '2.9.0'
+    def accompanist_version = '0.24.7-alpha'
 
     // Lifecycle
     implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.4.1'
+    implementation 'androidx.compose.runtime:runtime-livedata:1.2.0-alpha08'
 
     // Core KTX
     implementation 'androidx.core:core-ktx:1.7.0'
@@ -69,6 +83,11 @@ dependencies {
     implementation "androidx.compose.material:material:$compose_version"
     implementation "androidx.compose.ui:ui-tooling-preview:$compose_version"
     implementation 'androidx.core:core-splashscreen:1.0.0-beta02'
+    implementation "androidx.navigation:navigation-compose:2.4.2"
+    implementation "com.google.accompanist:accompanist-navigation-animation:$accompanist_version"
+    implementation "com.google.accompanist:accompanist-systemuicontroller:$accompanist_version"
+    implementation "com.google.accompanist:accompanist-pager:$accompanist_version"
+    implementation "com.google.accompanist:accompanist-placeholder-material:$accompanist_version"
 
     // Image Loading
     implementation 'io.coil-kt:coil-compose:2.0.0-rc03'
@@ -88,10 +107,19 @@ dependencies {
     // Serialization
     implementation 'com.google.code.gson:gson:2.9.0'
 
-    // Testing
+    // Unit Testing
     testImplementation 'junit:junit:4.13.2'
+    testImplementation 'androidx.arch.core:core-testing:2.1.0'
+
+
+    // Instrumented tests
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
     androidTestImplementation "androidx.compose.ui:ui-test-junit4:$compose_version"
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+    // Other testing dependencies
     debugImplementation "androidx.compose.ui:ui-tooling:$compose_version"
+    testImplementation "io.mockk:mockk:1.12.3"
+    testImplementation "org.robolectric:robolectric:4.8"
+    testImplementation 'org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.1'
 }

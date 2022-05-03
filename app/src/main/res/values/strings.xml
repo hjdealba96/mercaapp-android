@@ -1,3 +1,48 @@
 <resources>
     <string name="app_name">Merca App</string>
+    <string name="title_search_product">Search a product</string>
+    <string name="title_welcome_to_merca_app">Welcome to Merca App!</string>
+    <string name="title_buy_everything_best_price">Buy everything you need at the best price &#128181;&#129297;</string>
+    <string name="title_try_with_another_words">Try with another words &#129310;</string>
+    <string name="title_free_shipping">Free shipping</string>
+    <string name="title_not_specified">Not specified</string>
+    <string name="title_warranty_not_specified">Warranty information not specified</string>
+    <string name="title_new">New</string>
+    <string name="title_used">Used</string>
+    <string name="title_product_features">Product features</string>
+    <string name="title_general_features">General features</string>
+    <string name="title_no_address_information">No address information available</string>
+    <string name="title_take_a_look_product">Take a look at this amazing product! &#128525;</string>
+    <string name="title_share_product">Share product</string>
+    <string name="title_retry">Retry</string>
+    <string name="title_product_name">Type product name</string>
+    <string name="title_clear">Clear</string>
+    <string name="title_search">Search</string>
+    <string name="title_open_web_page">Open web page</string>
+    <string name="title_warning">Warning</string>
+    <string name="title_product_image">Product image</string>
+    <string name="title_go_back">Go back</string>
+    <string name="title_share">Share</string>
+    <string name="title_store">Store</string>
+    <string name="title_view_all_details">View all details</string>
+    <string name="title_next">Next</string>
+    <string name="title_product_picture">Product picture</string>
+
+    <string name="warning_something_went_wrong">Opps! Something went wrong &#128550;</string>
+    <string name="warning_not_connected_internet">It seems you are not connected to Internet! &#128551;</string>
+    <string name="warning_no_results_found">No results found</string>
+    <string name="warning_poor_internet_connection">Poor internet connection, try again later</string>
+
+    <plurals name="soldQuantity">
+        <item quantity="zero">No sales yet</item>
+        <item quantity="other">%d sold</item>
+    </plurals>
+
+    <plurals name="availableQuantity">
+        <item quantity="zero">Out of stock</item>
+        <item quantity="other">%d available</item>
+    </plurals>
+
+    <string name="placeholder" translatable="false">Placeholder</string>
+
 </resources>
